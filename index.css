@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "IBM Plex Mono Medium", serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px;
+    padding: 10px;
+
+    background-color: #f6f1eb;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 45px;
+    color: #403a34;
+}
+
+.container{
+    padding: 10px;
+    margin: 5px 5px;
+    width: 100%;
+
+    border-radius: 10px;
+
+
+}
+
+.team-wrapper{
+    padding: 45px 20px 20px 20px;
+    position: relative;
+
+    margin: 15px 20px;
+    border-radius: 10px;
+
+
+}
+
+
+.team-title{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    padding: 5px 15px;
+
+    border: solid white 1px;
+    border-top: none;
+    border-right: none;
+
+}
+
+
+
+.redbull{
+    background-color: #211c55;
+    color: white;
+}
+
+.redbull > .team-title{
+    color: #ed1d31;
+    border: solid #ed1d31 1px;
+    border-top: none;
+    border-right: none;
+}
+
+.ferrari{
+    background-color: #f70d1a;
+    color: white;
+
+}
+
+.ferrari > .team-title{
+    color: black;
+    border: solid black 1px;
+    border-top: none;
+    border-right: none;
+}
+
+.brabham{
+    background-color: #2f5239;
+    color: white;
+}
+
+
+.brabham > .team-title {
+    color: #dfbc9d;
+    border: solid #dfbc9d 1px;
+    border-top: none;
+    border-right: none;
+}
+
+
+/* desktop view */
+@media (min-width: 992px ) {
+    .container{
+        display: flex;
+    }
+
+    .team-wrapper{
+        flex: 1;
+    }
+}
+
+
+/* tablet view */
+@media (min-width: 768px) and (max-width: 991px ) {
+
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .team-wrapper:nth-child(1) , .team-wrapper:nth-child(2){
+        flex: 1;
+    }
+
+    .team-wrapper:nth-child(3){
+        flex: 0 1 100%;
+    }
+}
+
+/* mobile view */
+@media (max-width: 767px){
+    .container{
+        display: block;
+    }
+
+
+}
+
